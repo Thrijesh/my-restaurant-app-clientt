@@ -1,5 +1,5 @@
-import axios from 'axios'
 import React, { useState, useContext } from 'react'
+import axios from '../helpers/axios'
 
 const AuthContext = React.createContext()
 
@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
             password: password
         }
  
-        axios.post('http://localhost:5000/users/signin', credentials)
+        axios.post('users/signin', credentials)
         .then(res => {
             localStorage.setItem('user', JSON.stringify(res.data.user))
             localStorage.setItem('token', res.data.token) 
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
             lastName: lastName
         }
 
-        axios.post('http://localhost:5000/users/signup', signUpInfo)
+        axios.post('users/signup', signUpInfo)
         .then(res => {
             console.log(res.data, "Succesfully Created Profile")
         })
