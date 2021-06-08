@@ -1,0 +1,47 @@
+@import"../../style/var";
+@import"../../style/responsive";
+@import"../../style/flexBox";
+
+.Home {
+    @include flexBox(column, center, center);
+    width: 100vw;
+    padding: 2rem;
+    padding-bottom: 9rem;
+
+    .Menu {
+        @include flexBox(row, center, center);
+        flex-wrap: wrap;
+        width: 70%;
+
+        .Home-Pizza-Menu {
+            @include flexBox(column, center, center);
+            width: 200px;
+            height: 250px;
+            padding: .8rem 0;
+            margin: 1rem;
+            box-shadow: 0px 0px 2px 4px gray;
+            border-radius: .4rem;
+            cursor: pointer;
+            transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            .Img {
+                height: 85%;
+            }
+
+            .Title {
+                height: 15%;
+                width: 100%;
+                border-top: .15rem solid;
+                 
+                span {
+                    color: $colorMain;
+                    font-size: $fontSize-md;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

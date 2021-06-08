@@ -1,0 +1,50 @@
+.SideNav {
+  width: 100%;
+  position: relative;
+  padding: 2rem 3rem;
+}
+
+.SideNav header {
+  font-style: italic;
+  color: #edfdfb;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.SideNav header i {
+  color: #B10101;
+  font-weight: 900;
+}
+
+.SideNav a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #edfdfb;
+  font-size: 1.48rem;
+}
+
+.SideNav a:hover {
+  color: #B10101;
+}
+
+.SideNav .Close {
+  position: absolute;
+  top: 15%;
+  left: 2%;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  color: #edfdfb;
+  font-size: 2rem;
+}
+
+.SideNav .Close:hover {
+  color: #B10101;
+}
+
+.SideNav .active {
+  color: #B10101;
+}
+/*# sourceMappingURL=SideNav.css.map */

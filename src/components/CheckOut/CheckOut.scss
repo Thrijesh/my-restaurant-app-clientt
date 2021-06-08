@@ -1,0 +1,367 @@
+@import"../../style/var";
+@import"../../style/responsive";
+@import"../../style/flexBox";
+
+.CheckOut {
+    @include for-size(tablet-ls) {
+        @include flexBox(column, space-around, center);
+    }
+    @include flexBox(column, space-evenly, center);
+
+    .CheckOut-Nav {
+        @include flexBox(row, space-evenly, center);
+        width: 100%;
+        padding: 1rem 0;
+        background-color: $colorDark;
+
+        div{
+            padding: 1rem 3rem;
+
+            header {
+                color: $colorMain;
+            }
+
+            a {
+                padding: .5rem 1rem;
+                 color: $colorMist;
+                background-color: $colorMain;
+                text-decoration: none;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $colorMist;
+                    color: $colorMain;
+                }
+            }
+        }
+    }
+
+    h1 {
+        color: $colorMain;
+    }
+
+    .CheckOut-Flex {
+        @include for-size(tablet-ls) {
+            @include flexBox(column, center, center);
+            width: 100%;
+            margin: 0;
+        }
+        @include flexBox(row, center, flex-start);
+        width: 100%;
+        height: fit-content;
+        
+        .CheckOut-Billing-Container {
+            @include for-size(tablet-ls) {
+                @include flexBox(column, flex-end, center);
+                width: 100%;
+            }
+            @include flexBox(column, flex-start, center);
+            width: 45%;
+            height: fit-content;
+            padding: 1rem;
+            margin: .8rem;
+
+            .Login-Container {
+                @include flexBox(column, flex-start, flex-start);
+                width: 80%;
+                box-shadow: 0px 0px 2px 1px gray;
+
+                .Login-Header {
+                    width: 100%;
+                    padding: 0 .5rem;
+                    color: $colorMain;
+                    text-align: left;
+                    box-shadow: 0px 0px 2px 1px gray;
+                }
+
+                .User-Details {
+                    @include for-size(tablet-ls) {
+                        @include flexBox(column, flex-end, center);
+                    }
+                    @include flexBox(row, flex-start ,center);
+                    width: 100%;
+                    padding: .5rem;
+                    text-align: left;
+                    
+                    .User-Email {
+                        margin: .5rem;
+                        font-size: $fontSize-sm;
+                    }
+
+                    .User-Name {
+                        margin: .5rem;
+                        font-size: $fontSize-md;
+                    }
+                }
+            }
+
+            .Address-Container {
+                
+                @include flexBox(column, flex-start, flex-start);
+                width: 80%;
+                box-shadow: 0px 0px 2px 1px gray;
+                text-align: left;
+                
+                .Address-Header {
+                    width: 100%;
+                    padding: 0 .5rem;
+                    color: $colorMain;
+                    text-align: left;
+                    box-shadow: 0px 0px 2px 1px gray;
+                }
+                
+                .Selceted-Address {
+                    width: 100%;
+                    padding: .5rem;
+
+                    .Type {
+                        margin: 0;
+                        text-transform: uppercase;
+                    }
+
+                    .NameAndPhone {
+                        font-size: $fontSize-xs;
+                        font-weight: 500;
+                    }
+
+                    .Landmark {
+                        margin: 0;
+                        font-size: $fontSize-xs;
+                        font-weight: 400;
+                    }
+
+                    .Pincode, .Area, .Address {
+                        margin: 0;
+                        font-size: $fontSize-xs;
+                        font-weight: 400;
+                    } 
+                }
+
+                .CheckOut-Form {
+                    @include flexBox(column, space-between, center);
+                    width: 100%;
+                    padding: 1rem;
+                    box-shadow: 0px 0px 2px 1px gray;
+    
+                    header {
+                        color: $colorMain;
+                        font-size: $fontSize-md;
+                        font-weight: 600;
+                    }
+    
+                    input {
+                        width: 100%;
+                        display: block;
+                        padding: .5rem .8rem;
+                        margin-top: .5rem;
+                        border: none;
+                        outline: none;
+                        border-bottom: .15rem solid $colorMain;
+                    }
+                }
+    
+                .Address-List {
+                    @include flexBox(column, flex-start, center);
+                    width: 100%;
+                    padding: 1rem;
+                    box-shadow: 0px 0px 2px 1px gray;
+
+                    .List {
+                        @include flexBox(row, flex-start, center);
+                        height: fit-content;
+                        width: 100%;
+                        padding: .5rem;
+
+                        .Address-Select-Btn {
+                            display: block;
+                            padding: .4rem 1rem;
+                            background-color: $colorMain;
+                            color: $colorMist;
+                            border: none;
+                            outline: none;
+                        }
+
+                        .List_Details {
+                            .Type {
+                                margin: 0;
+                                text-transform: uppercase;
+                            }
+        
+                            .NameAndPhone {
+                                font-size: $fontSize-xs;
+                                font-weight: 500;
+                            }
+        
+                            .Landmark {
+                                margin: 0;
+                                font-size: $fontSize-xs;
+                                font-weight: 400;
+                            }
+        
+                            .Pincode, .Area, .Address {
+                                margin: 0;
+                                font-size: $fontSize-xs;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+
+                .Add-Address {
+                    padding: 0 .5rem;
+                    cursor: pointer;
+                }
+            }
+
+            .Payment-Mode-Container {
+                @include flexBox(column, flex-start, flex-start);
+                width: 80%;
+                box-shadow: 0px 0px 2px 1px gray;
+                
+                .Payment-Header {
+                    width: 100%;
+                    padding: 0 .5rem;
+                    color: $colorMain;
+                    text-align: left;
+                    box-shadow: 0px 0px 2px 1px gray;
+                }
+
+                .Payment-Mode {
+                    @include flexBox(row, center, center);
+                }
+            }
+        }
+
+        .CheckOut-Summary {
+            @include for-size(tablet-ls) {
+                width: 90%;
+            }
+            @include flexBox(column, flex-start, center);
+            width: 20%;
+            height: fit-content;
+            margin: .8rem;
+            padding: 1rem;
+            background-color: #f5f5f5;
+            border-radius: .3rem;
+
+            header {
+                color: $colorMain;
+                font-size: $fontSize-md;
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+            
+            .CheckOut-OrderList {
+
+                width: 100%;
+                padding: 1rem 0;
+
+                .Orders {
+                    @include flexBox(column, flex-start, center);
+                    width: 100%;
+
+                    .Orders-1 {
+                        @include flexBox(row, space-between, center);
+                        width: 100%;
+
+                        .Title {
+                            font-size: .7rem;
+                        }
+                    }
+
+                    .Orders-2 {
+                        @include flexBox(row, flex-end, flex-end);
+                        width: 100%;
+                        padding: 0 .5rem;
+                    }
+
+                    .Order-Inc-Dec {
+                        @include flexBox(row, center, center);
+                        border: 1px solid #d3d3d3;
+                        border-radius: .3rem;
+
+                        button {
+                            color: $colorMain;
+                            font-size: .7rem;
+                            background-color: transparent;
+                            border: none;
+                            padding-top: .1rem;
+                            cursor: pointer;
+
+                            &:hover {
+                                color: $colorPrimary;   
+                            }
+                        }
+
+                        div {
+                            padding: 0 .4rem;
+                            border-right: 1px solid #d3d3d3;
+                            border-left: 1px solid #d3d3d3;
+                            background-color: #ffcccb;
+                        }
+                    }
+                }
+            }
+
+            .CheckOut-Final {
+
+                @include flexBox(column, center, center);
+                width: 100%;
+
+                .Sub {
+                    @include flexBox(row, space-between, center);
+                    width: 100%;
+                    font-weight: 400;
+                    color: #bababa;
+                    border-top: 1px solid #bababa;
+                }
+
+                .Tax {
+                    @include flexBox(row, space-between, center);
+                    width: 100%;
+                    font-weight: 400;
+                    color: #bababa;
+                }
+
+                .Net {
+                    @include flexBox(row, space-between, center);
+                    width: 100%;
+                    font-weight: 600;
+                    color: #404040;
+                    border-top: 1px solid #bababa;
+                }
+            }
+        }
+    }
+
+    .Button {
+        display: block;
+        margin: .5rem;
+        padding: .5rem 1rem;
+        background-color: $colorMain;
+        color: $colorMist;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colorMist;
+            color: $colorMain;
+        }
+    }
+
+    .Order-Btn {
+        padding: .5rem;
+        width: 100%;
+        background-color: $colorMain;
+        color: $colorMist;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colorMist;
+            color: $colorMain;
+        }
+    }
+}

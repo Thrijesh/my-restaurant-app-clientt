@@ -1,0 +1,91 @@
+.Pizza {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  position: relative;
+}
+
+.Pizza .Menu-Button {
+  padding: .5rem 1rem;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  color: #edfdfb;
+  background-color: #B10101;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.Pizza .Menu-Button:hover {
+  color: #B10101;
+  background-color: #edfdfb;
+  border: 1px solid;
+}
+
+.Pizza .Pizza-Box {
+  width: 250px;
+  height: 350px;
+  margin: .3rem;
+  padding: .5rem;
+  -webkit-box-shadow: 0px 0px 2px 4px #04030f;
+          box-shadow: 0px 0px 2px 4px #04030f;
+  border-radius: .5rem;
+}
+
+.Pizza .Pizza-Box:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.Pizza .Pizza-Box .Img-Cont {
+  width: 100%;
+  height: 60%;
+}
+
+.Pizza .Pizza-Box .Det-Cont {
+  width: 100%;
+  height: 40%;
+}
+
+.Pizza .Pizza-Box .Det-Cont span {
+  display: block;
+  padding: .3rem;
+}
+
+.Pizza .Pizza-Box .Det-Cont span i {
+  color: #B10101;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.Pizza .Pizza-Box .Det-Cont button {
+  padding: .4rem;
+  outline: none;
+  border: none;
+  color: #edfdfb;
+  background-color: #B10101;
+  cursor: pointer;
+}
+
+.Pizza .Pizza-Box .Det-Cont button:hover {
+  background-color: #edfdfb;
+  color: #B10101;
+  border: 1px solid;
+}
+/*# sourceMappingURL=Pizza.css.map */

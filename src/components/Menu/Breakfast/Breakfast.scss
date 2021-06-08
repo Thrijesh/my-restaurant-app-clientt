@@ -1,0 +1,30 @@
+@import"../../../style/var";
+@import"../../../style/flexBox";
+@import"../../../style/responsive";
+
+
+.Menu-Button {
+    width: 100vw;
+    padding: .5rem 1rem;
+    color: $colorMist;
+    background-color: $colorMain;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+
+    &:hover {
+        color: $colorMain;
+        background-color: $colorMist;
+        border: 1px solid;
+    }
+}
+.Breakfast {
+    @include flexBox(row, center, center);
+    flex-wrap: wrap;
+    padding: 1rem; 
+    padding-bottom: 8rem; 
+    position: relative;
+}   

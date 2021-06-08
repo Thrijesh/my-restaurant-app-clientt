@@ -1,0 +1,115 @@
+.Cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #edfdfb;
+  padding: 1rem 4rem;
+  position: fixed;
+  bottom: 0;
+}
+
+.Cart .Cart-OrderList {
+  width: 100%;
+  max-height: 40vh;
+  padding: 0 1rem;
+  overflow-y: scroll !important;
+}
+
+.Cart .Cart-OrderList .Orders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Cart .Cart-OrderList .Orders .Order-Inc-Dec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Cart .Cart-OrderList .Orders .Order-Inc-Dec button {
+  padding: .2rem .5rem;
+  border: none;
+  outline: none;
+  color: #edfdfb;
+  background-color: #ff0022;
+  cursor: pointer;
+}
+
+.Cart .Cart-OrderList .Orders .Order-Inc-Dec button:hover {
+  background-color: #edfdfb;
+  color: #ff0022;
+}
+
+.Cart .Cart-Bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.Cart .Cart-Bottom .Cart-Orders button, .Cart .Cart-Bottom .Cart-CheckOut button {
+  margin: .4rem;
+  padding: .5rem .6rem;
+  border: none;
+  outline: none;
+  color: #edfdfb;
+  background-color: #ff0022;
+}
+
+.Cart .Cart-Bottom .Cart-Orders button:hover, .Cart .Cart-Bottom .Cart-CheckOut button:hover {
+  color: #ff0022;
+  background-color: #edfdfb;
+  border: 1px solid #ff0022;
+  cursor: pointer;
+}
+
+.Cart .Cart-Bottom .Cart-Orders span, .Cart .Cart-Bottom .Cart-CheckOut span {
+  display: inline-block;
+  margin: .4rem;
+  padding: .5rem .5rem;
+}
+/*# sourceMappingURL=Cart.css.map */

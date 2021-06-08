@@ -1,0 +1,76 @@
+@import"../../style/flexBox";
+@import"../../style/var";
+@import"../../style/responsive";
+
+.UserOrders {
+    width: 100vw;
+
+    nav {
+        @include flexBox(row, space-evenly, center);
+        width: 100%;
+        padding: 1rem 0;
+        background-color: $colorDark;
+    
+        div{
+            padding: 1rem 3rem;
+    
+            header {
+                color: $colorMain;
+            }
+    
+            a {
+                padding: .5rem 1rem;
+                    color: $colorMist;
+                background-color: $colorMain;
+                text-decoration: none;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: $colorMist;
+                    color: $colorMain;
+                }
+            }
+        }
+    }
+
+    h1 {
+        color: $colorMain;
+    }
+
+    .Your-Order {
+        @include flexBox(row, center, center);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        border: 1px solid;
+
+        .Sl-NO {
+            width: 10%;
+            height: 100%;
+            padding: 1rem;
+            margin-right: 1rem;
+        }
+
+        .YourOrder-List {
+            @include flexBox(column, center, flex-start);
+            width: 90%;
+            padding: 0 1rem;
+
+            p, h4{
+                margin: 0;
+            }
+
+            .YourOrder-Rec-List {
+                @include flexBox(row, space-around, center);
+
+                div {
+                    padding: 1rem;
+                    p {
+                        font-size: .7rem;
+                    }
+                }
+            }
+
+        }
+    }
+}

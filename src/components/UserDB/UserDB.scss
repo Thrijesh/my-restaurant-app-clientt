@@ -1,0 +1,23 @@
+@import"../../style/flexBox";
+@import"../../style/var";
+@import"../../style/responsive";
+
+
+.Dashboard {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: $colorMain;
+
+    a{
+        display: block;
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: #fff;
+    }
+} 

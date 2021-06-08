@@ -1,0 +1,23 @@
+@import"../../style/flexBox";
+@import"../../style/responsive";
+@import"../../style/var";
+
+
+.Ordered {
+    @include flexBox( column, center, center );
+
+    h1{
+        color: $colorMain;
+    }
+
+    a {
+        color: $colorPrimary;
+        text-decoration: none;
+        margin: 1rem;
+
+        &:hover {
+            text-decoration: underline;
+            color: $colorMain;
+        }
+    }
+}
