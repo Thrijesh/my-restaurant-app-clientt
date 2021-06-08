@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
         }
         
         setLoading(true)
-        await axiosInstance.post('/users/signin', credentials)
+        await axiosInstance.post('users/signin', credentials)
         .then(res => {
             localStorage.setItem('user', JSON.stringify(res.data.user))
             localStorage.setItem('token', res.data.token) 
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
         }
 
         setLoading(true)
-        await axiosInstance.post('/users/signup', signUpInfo)
+        await axiosInstance.post('users/signup', signUpInfo)
         .then(res => {
             setIsSignedUp(true)
         })

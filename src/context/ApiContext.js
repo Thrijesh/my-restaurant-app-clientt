@@ -59,7 +59,7 @@ export function ApiProvider({ children }) {
 
     const getRecipesByMenu = async(query) => {
         setLoading(true)
-        await axiosInstance.get(`/q=${query}`)
+        await axiosInstance.get(`q=${query}`)
         .then(res => {
             setMenuList(res.data)
         })
