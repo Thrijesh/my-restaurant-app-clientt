@@ -12,7 +12,7 @@ function SideNav() {
         <nav className="SideNav">
             <header>My <i>Restaurant</i></header>
             <NavLink to="/" exact activeClassName="active" onClick={toggleSideNav}>Home</NavLink>
-            <NavLink to="/catalog" activeClassName="active" onClick={toggleSideNav}>Catalog</NavLink>
+            <NavLink to="/about" activeClassName="active" onClick={toggleSideNav}>About</NavLink>
             <button className="Close" onClick={toggleSideNav}><TiTimesOutline /></button>
         </nav>
     )

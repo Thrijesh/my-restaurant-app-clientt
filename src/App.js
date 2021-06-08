@@ -21,6 +21,7 @@ import Signup from './components/Signup/Signup'
 import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 import Ordered from './components/Ordered/Ordered'
 import UserOrders from './components/UserOrders/UserOrders'
+import About from './components/About/About'
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
                 <PrivateRoute path="/checkout" component={CheckOut} />
                 <PrivateRoute path="/order-confirmed" component={Ordered} />
                 <PrivateRoute path="/your-orders" component={UserOrders} />
+                <Route path="/about" component={About} />
               </Layout>
             </Switch>
           </Router>

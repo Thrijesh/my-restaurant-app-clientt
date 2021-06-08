@@ -1,5 +1,5 @@
+import axios from 'axios'
 import React, { useState, useContext } from 'react'
-import axios from '../helpers/axios'
 
 const AuthContext = React.createContext()
 
@@ -10,15 +10,20 @@ export const useAuth = () => {
 export const AuthProvider = ({ children }) => {
 
     const [ isAuthenticated, setIsAuthenticated ] = useState(false)
+    const [ IsSignedUp, setIsSignedUp ] = useState(false)
+    const [ errorMessage, setErrorMessage ] = useState()
+    const [ loginErrorMessage , setLoginErrorMessage ] = useState()
+    const [ loading, setLoading ] = useState(false)
 
-    const submitLoginHandler = (e, email, password) => {
+    const submitLoginHandler = async(e, email, password) => {
         e.preventDefault()  
         const credentials = {
             email: email,
             password: password
         }
- 
-        axios.post('users/signin', credentials)
+        
+        setLoading(true)
+        await axios.post('http://localhost:5000/users/signin', credentials)
         .then(res => {
             localStorage.setItem('user', JSON.stringify(res.data.user))
             localStorage.setItem('token', res.data.token) 
@@ -26,8 +31,9 @@ export const AuthProvider = ({ children }) => {
             setIsAuthenticated(true)
         })
         .catch(error => {
-            console.log(error)
+            setLoginErrorMessage({...error.response.data})
         })
+        setLoading(false)
     }
 
     const logOutHandler = (e) => {
@@ -36,7 +42,7 @@ export const AuthProvider = ({ children }) => {
         setIsAuthenticated(false)
     }
 
-    const submitSignupHandler = (e, email, password, firstName, lastName) => {
+    const submitSignupHandler = async(e, email, password, firstName, lastName) => {
         e.preventDefault()
 
         const signUpInfo = {
@@ -46,17 +52,24 @@ export const AuthProvider = ({ children }) => {
             lastName: lastName
         }
 
-        axios.post('users/signup', signUpInfo)
+        setLoading(true)
+        await axios.post('http://localhost:5000/users/signup', signUpInfo)
         .then(res => {
-            console.log(res.data, "Succesfully Created Profile")
+            setIsSignedUp(true)
         })
         .catch(error => {
-            console.log(error)
+            setErrorMessage(error.response.data)
+            setIsSignedUp(false)
         })
+        setLoading(false)
     }
 
     const value = {
+        loginErrorMessage,
+        IsSignedUp,
         isAuthenticated,
+        errorMessage,
+        loading,
         submitLoginHandler,
         submitSignupHandler,
         logOutHandler,

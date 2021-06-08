@@ -1,4 +1,5 @@
 @import"../../style/var";
+@import"../../style/responsive";
 
 .SideNav {
     width: 100%;
@@ -6,10 +7,14 @@
     padding: 2rem 3rem;
 
     header {
+        @include for-size(tablet-ls) { 
+            font-size: 2.5rem;
+        }
         font-style: italic;
         color: $colorMist;
-        font-size: 2.5rem;
+        font-size: 5vw;
         font-weight: 900;
+        padding: 2rem;
 
         i {
             color: $colorMain;

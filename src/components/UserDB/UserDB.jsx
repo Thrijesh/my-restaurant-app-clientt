@@ -3,6 +3,8 @@ import { useApi } from '../../context/ApiContext'
 import { useAuth } from '../../context/AuthContext'
 import { NavLink, useHistory } from 'react-router-dom'
 
+import { TiTimesOutline } from 'react-icons/ti'
+
 import './UserDB.scss'
 
 function UserDB() {
@@ -23,10 +25,10 @@ function UserDB() {
 
     const dashboard = (
         <div className="Dashboard">
-            <button onClick={dashBoardToggleHandler}>X</button>
-            <h1>DashBoard</h1>
-            <h5>Name: {user_info && user_info.fullName}</h5>
-            <h5>Email: {user_info && user_info.email}</h5>
+            <button className="Dashboard-Close" onClick={dashBoardToggleHandler}><TiTimesOutline /></button>
+            <h3>Profile</h3>
+            <p>Name:<strong style={{color: "red"}}> {user_info && user_info.fullName}</strong></p>
+            <p>Email: <strong style={{color: "red"}}>{user_info && user_info.email}</strong></p>
             <div>
                 <NavLink to="/your-orders">Your Orders</NavLink>
             </div>

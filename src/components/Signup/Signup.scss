@@ -11,12 +11,38 @@
     @include flexBox(column, center, center);
     width: 60%;
     height: 80%;
+    padding: 1rem;
     background-color: $colorMain;
     margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: .5rem;
+
+    .Signup-Header {
+        header {
+            @include for-size(tablet-ls) { 
+                font-size: 2.5rem;
+            }
+
+            font-size: 4vw;
+            font-weight: 900;
+            font-style: italic;
+            color: $colorMist;
+
+            i {
+                color: $colorDark;
+            }
+        }
+
+        p{
+            margin: 0;
+            padding: 1rem;
+            font-size: 2rem;
+            color: $colorMist;
+        }
+    }
 
 
     form {

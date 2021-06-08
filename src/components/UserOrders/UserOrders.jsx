@@ -12,7 +12,7 @@ function UserOrders() {
                     <p>{el.recipeId.title}</p>
                     <img src={el.recipeId.image_url} width="80px" height="100px"/>
                 </div>
-        })
+        }) 
 
         return  <div key={i} className="Your-Order">
                     <div className="Sl-NO">

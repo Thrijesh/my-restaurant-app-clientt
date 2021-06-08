@@ -5,6 +5,7 @@ import { useApi } from '../../../context/ApiContext'
 import Cart from '../../Cart/Cart'
 import Navbar from '../../Navbar/Navbar'
 import Card from '../../RecipeCard/Card'
+import { Spinner } from '../../UI/Spinner/Spinner'
 
 import './Dinner.scss'
 
@@ -26,7 +27,7 @@ function Dinner() {
             <Navbar />
             <button className="Menu-Button" onClick={BackToMenu}>Menu</button>
             <div className="Dinner">
-                { loading ? <h1>Loading...</h1> : 
+                { loading ? <Spinner /> : 
                     menuList && menuList.map((item, i) => {
                         return <Card  key={i} image={item.image_url} title={item.title} price={item.price} id={item._id}/>
                     })

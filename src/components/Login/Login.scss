@@ -11,12 +11,38 @@
     @include flexBox(column, center, center);
     width: 60%;
     height: 80%;
+    padding: 1rem;
     background-color: $colorMain;
     margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: .5rem;
+
+    .Login-Header {
+        header {
+            @include for-size(tablet-ls) { 
+                font-size: 2.5rem;
+            }
+
+            font-size: 4vw;
+            font-weight: 900;
+            font-style: italic;
+            color: $colorMist;
+
+            i {
+                color: $colorDark;
+            }
+        }
+
+        p{
+            margin: 0;
+            padding: 1rem;
+            font-size: 2rem;
+            color: $colorMist;
+        }
+    }
 
     form {
         @include for-size(tablet-ls) {
@@ -24,6 +50,18 @@
             padding: .6rem;
         }
         width: 50%;
+
+        p{
+            display: block;
+            width: 100%;
+            margin: .3rem;
+            padding: .4rem;
+            background-color: $colorMist;
+            border-radius: .5rem;
+            color: $colorPrimary;
+            font-weight: 700;
+        }
+
         input{
             width: 100%;
             padding: .5rem 1rem;

@@ -4,13 +4,13 @@
 
 .UserOrders {
     width: 100vw;
-
+    
     nav {
         @include flexBox(row, space-evenly, center);
         width: 100%;
         padding: 1rem 0;
         background-color: $colorDark;
-    
+        
         div{
             padding: 1rem 3rem;
     
@@ -20,7 +20,7 @@
     
             a {
                 padding: .5rem 1rem;
-                    color: $colorMist;
+                color: $colorMist;
                 background-color: $colorMain;
                 text-decoration: none;
                 cursor: pointer;
@@ -42,7 +42,7 @@
         width: 90%;
         height: 100%;
         margin: auto;
-        border: 1px solid;
+        padding: 2rem 0;
 
         .Sl-NO {
             width: 10%;

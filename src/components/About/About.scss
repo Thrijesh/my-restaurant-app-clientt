@@ -1,0 +1,18 @@
+@import"../../style/var";
+@import"../../style/responsive";
+@import"../../style/flexBox";
+
+.About {
+    @include for-size(tablet-ls) {
+        width: 100%;
+        padding: 1rem;
+    }
+    background-color: $colorMain;
+    height: 100vh;
+    padding: 4rem 1rem;
+    color: $colorMist;
+    h4{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+}

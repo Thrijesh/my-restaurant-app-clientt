@@ -6,11 +6,33 @@
 .Dashboard {
     width: 100%;
     height: 100%;
-    padding: 1rem;
-    background-color: $colorMain;
+    padding: 4rem 1rem;
+    background-color: $colorMist;
+    position: relative;
+
+    .Dashboard-Close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: fit-content;
+        color: black !important;
+        background-color: transparent !important;
+        font-size: 1rem;
+
+        &:hover {
+            border: none !important;
+            transform: scale(1.3);
+        }
+    }
+
+    h3 {
+        color: $colorMain;
+    }
 
     a{
         display: block;
+        font-size: $fontSize-xs;
     }
 
     button {
@@ -19,5 +41,6 @@
         outline: none;
         border: none;
         background-color: #fff;
+        margin-top: 1rem;
     }
 } 

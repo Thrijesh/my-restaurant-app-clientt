@@ -22,4 +22,10 @@ export function Spinner2() {
     )
 }
 
+export function Spinner3() {
+    return (
+        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    )
+}
+
 

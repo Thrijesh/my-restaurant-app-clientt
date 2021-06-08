@@ -5,6 +5,7 @@ import './Lunch.scss'
 import Navbar from '../../Navbar/Navbar'
 import Cart from '../../Cart/Cart'
 import Card from '../../RecipeCard/Card'
+import { Spinner } from '../../UI/Spinner/Spinner'
 
 function Lunch() {
 
@@ -24,7 +25,7 @@ function Lunch() {
             <Navbar />
             <button className="Menu-Button" onClick={BackToMenu}>Menu</button>
             <div className="Lunch">
-                { loading ? <h1>Loading...</h1> : 
+                { loading ? <Spinner /> : 
                     menuList && menuList.map((item, i) => {
                     return  <Card  key={i} image={item.image_url} title={item.title} price={item.price} id={item._id}/>
                     })
