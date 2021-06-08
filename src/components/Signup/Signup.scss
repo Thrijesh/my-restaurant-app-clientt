@@ -10,7 +10,7 @@
     }
     @include flexBox(column, center, center);
     width: 60%;
-    height: 80%;
+    height: fit-content;
     padding: 1rem;
     background-color: $colorMain;
     margin: auto;
@@ -51,10 +51,22 @@
             padding: .6rem;
         }
         width: 50%;
+
         input{
             width: 100%;
             padding: .5rem 1rem;
             margin: .3rem;
+        }
+
+        p{
+            display: block;
+            width: 100%;
+            margin: .3rem;
+            padding: .4rem;
+            background-color: $colorMist;
+            border-radius: .5rem;
+            color: $colorPrimary;
+            font-weight: 700;
         }
 
         button {

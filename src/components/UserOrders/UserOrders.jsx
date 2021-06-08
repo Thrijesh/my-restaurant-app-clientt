@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { useApi } from '../../context/ApiContext'
 
 import './UserOrders.scss'
 
+
 function UserOrders() {
-    const { userOrders } = useApi()
+    const { userOrders, getOrders } = useApi()
+
+    useEffect(() => {
+        getOrders()
+    }, [])
+
     const ordersList = userOrders.map((el, i)=> {
         const list = el.orderedItems.map(el => {
-         return <div key={el.recipeId.title}>
+            return <div key={el.recipeId.title}>
                     <p>{el.recipeId.title}</p>
                     <img src={el.recipeId.image_url} width="80px" height="100px"/>
                 </div>
         }) 
-
+        
         return  <div key={i} className="Your-Order">
                     <div className="Sl-NO">
                         <h4>{i + 1}</h4>

@@ -56,9 +56,9 @@ function Signup() {
                 <input type="email" placeholder="Email" value={email} onChange={event => setEmail(event.target.value)} required /><br />
                 <input type="password" placeholder="Password Min 6 Charecters" value={password} onChange={event => setPassword(event.target.value)} required /><br />
                 <input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={event => setConfirmPassword(event.target.value)} required /><br />
-                <p>{pwdMsg}</p>
-                <p>{pwdMatchMsg}</p>
-                <p>{errorMessage && errorMessage.message}</p>
+                {pwdMsg && <p>{pwdMsg}</p>}
+                {pwdMatchMsg && <p>{pwdMatchMsg}</p>}
+                {errorMessage && <p>{errorMessage.message}</p>}
                 <button type="submit">{loading ? <Spinner3 /> : "Signup"}</button>
             </form>
             <div className="Signup-Nav">
