@@ -1,1 +1,1 @@
-export const url = "https://my-restaurant-app-server.herokuapp.com/"
+export const url = "http://localhost:5000/"

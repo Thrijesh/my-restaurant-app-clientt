@@ -1,5 +1,6 @@
-import axios from 'axios'
 import React, { useState, useContext } from 'react'
+import axiosInstance from '../helpers/axios'
+
 
 const AuthContext = React.createContext()
 
@@ -23,7 +24,7 @@ export const AuthProvider = ({ children }) => {
         }
         
         setLoading(true)
-        await axios.post('http://localhost:5000/users/signin', credentials)
+        await axiosInstance.post('/users/signin', credentials)
         .then(res => {
             localStorage.setItem('user', JSON.stringify(res.data.user))
             localStorage.setItem('token', res.data.token) 
@@ -53,7 +54,7 @@ export const AuthProvider = ({ children }) => {
         }
 
         setLoading(true)
-        await axios.post('http://localhost:5000/users/signup', signUpInfo)
+        await axiosInstance.post('/users/signup', signUpInfo)
         .then(res => {
             setIsSignedUp(true)
         })

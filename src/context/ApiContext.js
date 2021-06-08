@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react'
-import axios from 'axios'
 import axiosInstance from '../helpers/axios'
 
 const ApiContext = React.createContext()
@@ -32,7 +31,7 @@ export function ApiProvider({ children }) {
     const getById = async (id) => {
         setLoading(true)
         console.log(`Clicked On: ${id}`)
-        await axios.get(`http://localhost:5000/id/${id}`)
+        await axiosInstance.get(`id/${id}`)
         .then(res => {
             setRecipeByID(res.data)
         })
@@ -44,7 +43,7 @@ export function ApiProvider({ children }) {
         e.preventDefault()
         setLoading(true)
         setError(null)
-        await axios.get(`http://localhost:5000/q=${query}`)
+        await axiosInstance.get(`q=${query}`)
         .then(res => {
             console.log(res.data)
             setSearchData(res.data)
@@ -60,7 +59,7 @@ export function ApiProvider({ children }) {
 
     const getRecipesByMenu = async(query) => {
         setLoading(true)
-        await axios.get(`http://localhost:5000/q=${query}`)
+        await axiosInstance.get(`/q=${query}`)
         .then(res => {
             setMenuList(res.data)
         })
